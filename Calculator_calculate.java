@@ -51,6 +51,8 @@ public class Calculator_calculate {
 		case "\n":
 			str="=";
 		case "=":
+			opr_result(str);
+			break;
 		case "+":
 		case "-":
 		case "*":
@@ -213,6 +215,23 @@ public class Calculator_calculate {
 			pre_input = "opr";
 			
 		}
+	}
+
+	private void opr_result(String str){
+		switch(pre) {
+		case "^":
+		case "|":
+		case "&":
+			opr_hexcal(str);
+			break;
+		default:
+			opr_cal(str);
+			break;
+		
+		
+		}
+
+		
 	}
 
 	private void opr_bit(String str) {
